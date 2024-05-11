@@ -11,6 +11,7 @@ var JourneyList map[model.User][]model.Journey = map[model.User][]model.Journey{
 			Took a leisurely stroll along the waterfront promenade, admiring the views of the Adriatic Sea.`,
 		"Hotel Koper",
 		"1234567891",
+		"Koper",
 		[]model.Activity{
 			model.NewActivity("shoping", "Prada", "http://localhost:5000/images/prada.jpg", 4, 4000),
 			model.NewActivity("restourant", "Restaurant Gordon Ramsay", "http://localhost:5000/images/remsi.jpg", 5, 200),

@@ -12,6 +12,7 @@ type Journey struct {
 	Map
 	ID       string
 	Activity []Activity
+	City     string
 
 	Date   time.Time
 	Images []string
@@ -19,12 +20,13 @@ type Journey struct {
 	Stay   string //place to sleep
 }
 
-func NewJourney(Map Map, Diary, Stay, ID string, Activity []Activity) Journey {
+func NewJourney(Map Map, Diary, Stay, ID, City string, Activity []Activity) Journey {
 	return Journey{
 		ID:       ID,
 		Map:      Map,
 		Activity: Activity,
 		Date:     time.Now(),
+		City:     City,
 		Images:   nil,
 		Diary:    Diary,
 		Stay:     Stay,
