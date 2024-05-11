@@ -5,6 +5,7 @@ import (
 	"errors"
 	"fmt"
 	"io"
+	"log"
 	"net/http"
 	"os"
 	"root/helper"
@@ -35,9 +36,10 @@ func main() {
 	mux.HandleFunc("PUT /journey/update/activity", PutUpdateActivity)
 	mux.HandleFunc("PUT /journey/update/image", PutUpdateImage)
 
+	mux.HandleFunc("GET /user", GetUserData)
 	mux.HandleFunc("POST /user/new", CreateNewAccount)
-
 	mux.HandleFunc("POST /user/chek", PrintUser)
+	mux.HandleFunc("GET /user/info", GetUserInfo)
 
 	handler := CorsMiddleware(mux)
 	http.ListenAndServe(":5000", handler)
@@ -139,4 +141,22 @@ func PrintUser(w http.ResponseWriter, r *http.Request) {
 	// if _, ok := store.JourneyList[*newUser]; ok {
 	// 	fmt.Println(ok)
 	// }
+}
+
+func GetUserData(w http.ResponseWriter, r *http.Request) {
+	data, err := json.Marshal(store.JourneyList[model.NewUser("Janko", "jankokondic84@gmail.com", "12345678", "avatar.jpg", 21)])
+	if err != nil {
+		log.Println(err)
+	}
+
+	w.Write(data)
+}
+
+func GetUserInfo(w http.ResponseWriter, r *http.Request) {
+	data, err := json.Marshal(model.NewUser("Janko", "jankokondic84@gmail.com", "12345678", "avatar.jpeg", 21))
+	if err != nil {
+		log.Println(err)
+	}
+
+	w.Write(data)
 }

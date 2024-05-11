@@ -19,11 +19,11 @@ type Journey struct {
 	Stay   string //place to sleep
 }
 
-func NewJourney(Map Map, Diary, Stay, ID string) Journey {
+func NewJourney(Map Map, Diary, Stay, ID string, Activity []Activity) Journey {
 	return Journey{
 		ID:       ID,
 		Map:      Map,
-		Activity: nil,
+		Activity: Activity,
 		Date:     time.Now(),
 		Images:   nil,
 		Diary:    Diary,
