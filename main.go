@@ -2,7 +2,6 @@ package main
 
 import (
 	"encoding/json"
-	"errors"
 	"fmt"
 	"io"
 	"log"
@@ -71,9 +70,9 @@ func PutUpdateActivity(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	currentJourney := store.JourneyList[resive.User][resive.ID]
+	// currentJourney := store.JourneyList[resive.User]
 
-	currentJourney.Activity = append(currentJourney.Activity, resive.Activity)
+	// currentJourney.Activity = append(currentJourney.Activity, resive.Activity)
 }
 
 func PutUpdateImage(w http.ResponseWriter, r *http.Request) {
@@ -104,13 +103,13 @@ func PostNewJourney(w http.ResponseWriter, r *http.Request) {
 	//create new ID
 	resive.Journey.ID = helper.GenerateID()
 
-	currentJourney, ok := store.JourneyList[resive.User]
-	if !ok {
-		http.Error(w, errors.New("user not exst jet").Error(), http.StatusBadRequest)
-		return
-	}
+	// currentJourney, ok := store.JourneyList[resive.User]
+	// if !ok {
+	// 	http.Error(w, errors.New("user not exst jet").Error(), http.StatusBadRequest)
+	// 	return
+	// }
 
-	currentJourney[resive.ID] = resive.Journey
+	// currentJourney[resive.ID] = resive.Journey
 
 	//save in the file
 }
@@ -123,7 +122,7 @@ func CreateNewAccount(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	store.JourneyList[*newUser] = make(map[string]model.Journey)
+	// store.JourneyList[*newUser] = make(map[string]model.Journey)
 
 	w.WriteHeader(http.StatusCreated)
 	w.Write([]byte("User Created:D"))
