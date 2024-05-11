@@ -39,6 +39,9 @@ func main() {
 	mux.HandleFunc("POST /user/new", CreateNewAccount)
 	mux.HandleFunc("POST /user/chek", PrintUser)
 	mux.HandleFunc("GET /user/info", GetUserInfo)
+	mux.HandleFunc("PUT /user/budget", PutUserUpdateBudget)
+
+	mux.HandleFunc("GET /top-activity", GetTopActivity)
 
 	handler := CorsMiddleware(mux)
 	http.ListenAndServe(":5000", handler)
@@ -143,7 +146,7 @@ func PrintUser(w http.ResponseWriter, r *http.Request) {
 }
 
 func GetUserData(w http.ResponseWriter, r *http.Request) {
-	data, err := json.Marshal(store.JourneyList[model.NewUser("Janko", "jankokondic84@gmail.com", "12345678", "avatar.jpg", 21)])
+	data, err := json.Marshal(store.JourneyList["Janko"])
 	if err != nil {
 		log.Println(err)
 	}
@@ -152,9 +155,33 @@ func GetUserData(w http.ResponseWriter, r *http.Request) {
 }
 
 func GetUserInfo(w http.ResponseWriter, r *http.Request) {
-	data, err := json.Marshal(model.NewUser("Janko", "jankokondic84@gmail.com", "12345678", "avatar.jpeg", 21))
+	data, err := json.Marshal(store.User)
 	if err != nil {
 		log.Println(err)
+	}
+
+	w.Write(data)
+}
+
+func PutUserUpdateBudget(w http.ResponseWriter, r *http.Request) {
+	money := struct {
+		Budget int `budget`
+	}{}
+
+	if err := json.NewDecoder(r.Body).Decode(&money); err != nil {
+		http.Error(w, err.Error(), http.StatusBadRequest)
+		return
+	}
+
+	store.User.StartingBudget += money.Budget
+	fmt.Println(store.User.StartingBudget)
+}
+
+func GetTopActivity(w http.ResponseWriter, r *http.Request) {
+	data, err := json.Marshal(store.ListOfActiviryInTown)
+	if err != nil {
+		http.Error(w, err.Error(), http.StatusBadRequest)
+		return
 	}
 
 	w.Write(data)
