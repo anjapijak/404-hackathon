@@ -4,7 +4,7 @@ import "root/model"
 
 var JourneyList map[string][]model.Journey = map[string][]model.Journey{
 	"Janko": {model.NewJourney(
-		model.NewMap(13.49, 7, false),
+		model.NewMap(13.7304781, 45.5479864, false),
 		`Arrived in Koper in the afternoon.
 			Checked into a cozy Airbnb apartment near the city center.
 			Explored the old town area and enjoyed some local cuisine at a nearby restaurant.
