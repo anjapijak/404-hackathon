@@ -2,8 +2,8 @@ package store
 
 import "root/model"
 
-var JourneyList map[string][]model.Journey = map[string][]model.Journey{
-	"Janko": {model.NewJourney(
+var JourneyList []model.Journey = []model.Journey{
+	model.NewJourney(
 		model.NewMap(13.7304781, 45.5479864, false),
 		`Arrived in Koper in the afternoon.
 			Checked into a cozy Airbnb apartment near the city center.
@@ -16,7 +16,21 @@ var JourneyList map[string][]model.Journey = map[string][]model.Journey{
 			model.NewActivity("shoping", "Prada", "http://localhost:5000/images/prada.jpg", 4, 4),
 			model.NewActivity("restourant", "Restaurant Gordon Ramsay", "http://localhost:5000/images/remsi.jpg", 5, 200),
 		},
-	)},
+	), model.NewJourney(
+		model.NewMap(135.777, 34.597, false),
+		`    Arrived in Kyoto in the morning after a long flight.
+		Checked into a traditional ryokan in the heart of the city.
+		Explored the nearby streets and marveled at the beautiful temples and shrines.
+		Enjoyed a delicious lunch of sushi and sashimi at a local restaurant.
+		Took a leisurely walk through the Gion district, hoping to catch a glimpse of a geisha.`,
+		"Hotel Tokyo",
+		"6712830912",
+		"Kyoto",
+		[]model.Activity{
+			model.NewActivity("shoping", "Prada", "http://localhost:5000/images/prada.jpg", 4, 4),
+			model.NewActivity("restourant", "Restaurant Gordon Ramsay", "http://localhost:5000/images/remsi.jpg", 5, 200),
+		},
+	),
 }
 
 var User model.User = model.User{
