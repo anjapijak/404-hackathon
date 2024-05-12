@@ -146,7 +146,7 @@ func PrintUser(w http.ResponseWriter, r *http.Request) {
 }
 
 func GetUserData(w http.ResponseWriter, r *http.Request) {
-	data, err := json.Marshal(store.JourneyList["Janko"])
+	data, err := json.Marshal(store.JourneyList)
 	if err != nil {
 		log.Println(err)
 	}
