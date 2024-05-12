@@ -1,0 +1,8 @@
+.flex-column{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(245, 0, 0, 0.396);
+    width: 400px;
+    z-index: 5;
+}

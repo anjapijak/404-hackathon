@@ -1,0 +1,78 @@
+.nav-link {
+    color: #427AA1; /* Default color for nav links */
+}
+
+
+.nav-link.active {
+    font-weight: bold; /* Example: Make active link bold */
+    color: rgb(6, 71, 137);
+}
+
+
+
+.wrapper{
+    display: flex;
+}
+
+.flex-column{
+    position: absolute;
+    top: 0;
+    left: 0;
+   /* From https://css.glass */
+/* From https://css.glass */
+/* background: rgba(255, 255, 255, 0.67);
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(9.1px);
+-webkit-backdrop-filter: blur(9.1px);
+border: 1px solid rgba(255, 255, 255, 0.34); */
+background-color: rgb(255, 255, 255);
+    height: 100vh;
+    z-index: 5;
+}
+
+.full{
+    width: 100%;
+    height: 100vh;
+   
+}
+
+.menu10{
+    padding: 20px;
+    text-decoration:none;
+    color: black;
+    border-radius: 5px;
+    width: 200px;
+}
+
+.links{
+    padding: 13px 20px;
+    border-radius: 5px;
+    border: 1px solid white;
+    margin: 3px 0;
+    text-align: left;
+    width: 300px;
+    background-color: white;
+}
+
+.links:hover{
+    background-color: rgb(230, 230, 230);
+}
+
+.logoposition{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.logo{
+    width: 100px;
+}
+
+.menuicon{
+    width: 34px;
+    height: 30px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+

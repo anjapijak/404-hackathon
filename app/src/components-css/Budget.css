@@ -1,0 +1,19 @@
+#budget{
+    color: #427AA1;
+    font-size:1vw ;
+    padding: 5%;
+    background-color: white;
+  }
+.btn-blue {
+    background-color: #427AA1;
+    color: #EBF2FA;
+    border: none;
+    font-size: 1vw;
+    
+  }
+  
+  /* Hover effect for the add new page button */
+  .btn-blue:hover {
+    background-color: #064789;
+  }
+  

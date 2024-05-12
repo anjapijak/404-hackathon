@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    background: #ffffff;
+    color: #fff;
+    background-size: cover;
+    background-position: center;
+    max-width: 750px;
+    height: 50vh;
+    margin-top: 50px;
+    margin: auto;
+    position: relative;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    top: 30px;
+}
+.container2{
+    background-color: #ebf2fa;
+    box-shadow: 0 5px 15px #0008;
+    max-width: 850px;
+    height: 105vh;
+    margin: auto;
+    position: relative;
+    margin-bottom: 30px;
+}
+#textBox{
+    float: left;
+    position: absolute;
+    left: 10%;
+    bottom: 0%;
+    height: 42%;
+    width: 40%;
+    border: none;
+    outline:none;
+    background: transparent;
+}
+#icon1{
+    position: absolute;
+    width: 60px;
+    bottom: 55%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color:#f8fbff;
+    border: none;
+    border-radius: 50%;
+    padding: 15px;
+    cursor: pointer;
+    color: #787878;
+}
+#icon1:hover{
+    cursor: pointer;
+    background-color: transparent;
+}
+input[type=text] {
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid black;
+    float: left;
+    padding: 10px 10px;
+    width: 80%;
+    height: 7%;
+    transition: 0.3s ease;
+    margin-left: 110%;
+    margin-top: 15%;
+}
+input { 
+    border: none; 
+    outline: none; 
+} 
+.info1{
+    position: absolute;
+    bottom: 5%;
+    left: 15%;
+    height: 50%;
+    width: 40%;
+    }
+.button{
+    background-color: #787878;
+    width: 15%;
+    height: 7%;
+    position: absolute;
+    bottom: 5%;
+    left: 80%;
+    background-color: #b8e4ff;
+    color: #000000;
+    padding: 5px 15px 5px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+    font-weight: bold;
+    font-size: 15px;
+}
+button:hover{
+   opacity: 0.8;
+}
+#icon2{
+    background-color: transparent;
+    position: absolute;
+    bottom:28%;
+    left: 69%;
+    color: black;
+}

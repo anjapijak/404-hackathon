@@ -1,0 +1,86 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
+
+.nanum-pen-script-regular {
+    font-family: "Nanum Pen Script", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  #all-pages{
+    align-items: center;
+    background-color: transparent;
+    padding-left: 12%;
+    width: 50vw;
+    font-size: 1.3vw;
+  }
+
+  #a-page{
+    background-color: transparent;
+    font-size: 1.3vw;
+  }
+  
+  /* Styles for the diary title */
+  .diary-title {
+
+    color: #427AA1; 
+    padding-left: 15%;
+
+  }
+  
+  /* Styles for the diary page */
+  .diary-page {
+    padding: 20px;
+    border: 1px solid #EBF2FA;
+    border-radius: 10px;
+    color: #427AA1
+  }
+  
+  /* Styles for the entry date */
+  .entry-date {
+    font-size: 1.3vw;
+
+    color: #427AA1
+  }
+  
+  /* Styles for the entry content */
+  .entry-content {
+    font-size: 1.3vw;
+    color: #427AA1;
+    margin-top: 2%px;
+  }
+  
+  /* Styles for the entry activities section */
+  .entry-activities {
+    margin-top: 20px;
+  }
+  
+  /* Styles for the activity list */
+  .activity-list {
+    list-style-type: none;
+    padding-left: 0;
+    font-size: 1.3vw;
+  }
+  
+  /* Styles for the add new page button */
+  .fra {
+    background-color: #427AA1;
+    color: #EBF2FA;
+    border: none;
+    font-size: 1.3vw;
+    padding: 10px 0;
+    border-radius: 5px;
+    margin: 0 2% 50px 2%;
+    width: calc(100% - 4%);
+  }
+  
+  /* Hover effect for the add new page button */
+  .fra:hover {
+    background-color: #427AA1;
+  }
+  
+
+.fora{
+  height: 500px;
+  overflow: auto;
+}
